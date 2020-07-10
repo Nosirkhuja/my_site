@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML5 и CSS3 сайт</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>H-N</span>
+    </div>
+    <div id="about">
+      <a href="#" onclick="slowScroll('#contacts')" title="Контакты">Контакты</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Программирование</h1>
+    <h3>как способ жизни!</h3>
+  </div>
+
+  <div id="overview">
+  <div id="contacts">
+    <center><h5>Обратная связь</h5></center>
+    <div class="img">
+      <a href="https://github.com/Nosirkhuja/"><img src="https://www.weblife.fr/wp-content/uploads/2019/01/github-logo.png" alt=""></a>
+    </div>
+    <div class="img">
+      <a href="https://stepik.org/users/51436151"><img src="https://static.tildacdn.com/tild6533-3332-4264-b434-363637356530/stepik-share-ru.png" alt=""></a>
+    </div>
+    <div class="img">
+      <a href="https://vk.com/hnosir"><img src="https://upload.wikimedia.org/wikipedia/commons/2/21/VK.com-logo.svg" alt=""></a>
+    </div>
+    <div class="img">
+      <a href="https://www.instagram.com/homidovvv/"><img src="https://lh3.googleusercontent.com/2sREY-8UpjmaLDCTztldQf6u2RGUtuyf6VT5iyX3z53JS4TdvfQlX-rNChXKgpBYMw" alt=""></a>
+    </div>
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
